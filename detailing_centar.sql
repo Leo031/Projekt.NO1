@@ -12,19 +12,21 @@ create table usluga(
 
 );
 
-create table osoba(
-    sifra int not null primary key auto_increment,
-    ime varchar(50)not null,
-    prezime varchar(50) not null,
-    email varchar(50),
-    oib char(11) not null
-);
-
 create table djelatnik(
     sifra int not null primary key auto_increment,
-    osoba int not null,
-    iban char(21) not null
+    ime varchar(59) not null,
+    prezime varchar(50) not null,
+    email varchar(100),
+    oib char(11)
+    
 );
 
+create table korisnik(
+    sifra int not null primary key auto_increment,
+    ime varchar(50) not null,
+    prezime varchar(50) not null,
+    broj_telefona varchar(50) not null
+
+);
 
 
