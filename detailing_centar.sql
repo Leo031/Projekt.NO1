@@ -10,8 +10,7 @@ create table usluga(
     naziv_usluge varchar(50)not null,
     cijena decimal(18,2),
     trajanje datetime,
-    djelatnik int not null,
-    korisnik int not null
+    djelatnik int not null
 );
 
 create table djelatnik(
@@ -35,5 +34,5 @@ create table korisnik(
 
 
 alter table usluga add foreign key (djelatnik) references djelatnik(sifra);
-alter table usluga add foreign key (korisnik) references korisnik(sifra);
 alter table djelatnik add foreign key (korisnik) references korisnik(sifra);
+
